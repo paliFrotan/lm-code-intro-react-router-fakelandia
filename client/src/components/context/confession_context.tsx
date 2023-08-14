@@ -43,7 +43,7 @@ const ConfessionProvider: React.FC<Props> = ({ children }) => {
   }
 
   return (
-    <ConfessionContext.Provider value={confession}>
+    <ConfessionContext.Provider value={ confession }>
       <ConfessionUpdateContext.Provider value={updateConfession}>
         {children}
       </ConfessionUpdateContext.Provider>
