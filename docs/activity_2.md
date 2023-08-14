@@ -73,6 +73,7 @@ We can knowingly break the rule of Don't Repeat Yourself, but with the knowledge
 
 👉 Copy the `misdeameanour.types.ts` file into a new `types` folder in your `client` folder. Now you can import it and use it in your React project!
 
+
 (The disadvantage is that if you edit this type for any reason you'll have to edit it in both places. But you won't have to edit it at all during this assignment, so copying it to your `client` project will be fine.)
 
 ## Putting it together: Fetching Misdemeanours
