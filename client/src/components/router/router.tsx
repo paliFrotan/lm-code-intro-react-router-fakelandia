@@ -1,5 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-
+import MisdemeanoursProvider from "../context/misdemeanours_context";
 import Home from "../home/home";
 import Misdemeanour from "../misdemeanour/misdemeanours";
 import Confession from "../confession/confession";
@@ -12,13 +12,15 @@ const NotFound : React.FC = () =>
     </div>;
 
 export const FakelandiaRouter : React.FC= () => (
-    <Routes>
-        <Route path="/" element={<MainLayout />}>
-            <Route index element={<Home /> } />    
-            <Route path='Misdemeanour' element = {<Misdemeanour />} />  
-            <Route path='Confession' element= {<Confession />} />
-            <Route path="*" element={<NotFound />}/> 
-        </Route>
-    </Routes>
+    <MisdemeanoursProvider>
+        <Routes>
+            <Route path="/" element={<MainLayout />}>
+                <Route index element={<Home /> } />    
+                <Route path='Misdemeanour' element = {<Misdemeanour />} />  
+                <Route path='Confession' element= {<Confession />} />
+                <Route path="*" element={<NotFound />}/> 
+            </Route>
+        </Routes>
+    </MisdemeanoursProvider>
 );
 
