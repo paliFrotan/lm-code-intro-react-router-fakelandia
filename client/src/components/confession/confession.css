@@ -1,0 +1,25 @@
+.confessionDisplay {
+    display: block;
+    text-align: center;
+  }
+  
+  .confessionForm {
+    display: inline-block;
+    margin: 2rem auto;
+  }
+  
+  .confessionForm__element {
+    text-align: right;
+    margin: 0.5rem 2rem;
+  }
+  
+  .confessionForm__button {
+    text-align: center;
+  }
+  
+  .confessionForm__thankyou {
+    text-align: center;
+    font-style: italic;
+    margin-top: 2rem;
+    color: blue;
+  }

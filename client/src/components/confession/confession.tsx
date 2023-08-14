@@ -1,10 +1,28 @@
-import gif from '../../assets/Under_construction_animated.gif';
+import ConfessionProvider from "../context/confession_context";
+import "./confession.css";
+import DisabledProvider from "../context/disabled_context";
+import React from "react";
+import ConfessionForm from "./confession_form";
 
-const Confession = () => <section className='content'>
-    <h2 className='subtitle'>Welcome.</h2>
-    <p>I have been a fan of <em>React Router</em> ever since I heard their first album 😍😍</p>    
-    <p>Please enjoy my fan page! I'll make more content soon.</p>
-    <img src={gif} alt='Under construction!'/>
-</section>;
+const Confession: React.FC = () => {
+  return (
+    <>
+      <h1 className="pageHeading">Confession</h1>
+      <div className="pageText">
+        It's very difficult to catch people committing misdemeanours so we
+        appreciate it when citizens confess to us directly.
+      </div>
+      <div className="pageText">
+        However, if you're just having a hard day and need to vent then you're
+        welcome to contact us here too. It's entirely up to you!
+      </div>
+      <DisabledProvider>
+        <ConfessionProvider>
+          <ConfessionForm />
+        </ConfessionProvider>
+      </DisabledProvider>
+    </>
+  );
+};
 
 export default Confession;

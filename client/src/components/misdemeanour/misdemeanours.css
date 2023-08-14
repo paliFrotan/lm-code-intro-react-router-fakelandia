@@ -1,0 +1,35 @@
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+  
+  .table__row {
+    border: 1px solid;
+  }
+  
+  .table__row--selfconfessed {
+    background-color: yellow;
+  }
+  
+  .table__cell {
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+  }
+  
+  .table__image {
+    width: 130px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .table {
+      font-size: 0.75rem;
+    }
+    .table__cell {
+      padding: 0.25rem;
+    }
+    .table__image {
+      width: 75px;
+    }
+  }
