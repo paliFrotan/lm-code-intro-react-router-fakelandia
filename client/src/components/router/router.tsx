@@ -1,16 +1,9 @@
 import {Routes, Route} from "react-router-dom";
-//import './App.css';
-// import Header from './components/header/header';
-// import Footer from './components/footer/footer';
-// import Home from './components/home/home';
-
-// const Home : React.FC = () => <>Home!</>;
-// const Confession : React.FC = () => <>Confess To Us!</>;    
-// const Misdemeanour : React.FC = () => <>Misdemeanours!</>;
 
 import Home from "../home/home";
 import Misdemeanour from "../misdemeanour/misdemeanour";
 import Confession from "../confession/confession";
+import {MainLayout} from "../layouts/main_layouts";
 
 const NotFound : React.FC = () => 
     <div>
@@ -20,10 +13,12 @@ const NotFound : React.FC = () =>
 
 export const FakelandiaRouter : React.FC= () => (
     <Routes>
-        <Route path='/' element={<Home /> } />    
-        <Route path='/Misdemeanour' element = {<Misdemeanour />} />  
-        <Route path='/Confession' element= {<Confession />} />
-        <Route path="*" element={<NotFound />}/> 
+        <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home /> } />    
+            <Route path='Misdemeanour' element = {<Misdemeanour />} />  
+            <Route path='Confession' element= {<Confession />} />
+            <Route path="*" element={<NotFound />}/> 
+        </Route>
     </Routes>
 );
 

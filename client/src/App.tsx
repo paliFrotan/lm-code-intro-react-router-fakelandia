@@ -3,7 +3,8 @@ import './App.css';
 // import Footer from "./components/footer/footer";
 // import Home from "./components/home/home";
 import { BrowserRouter } from "react-router-dom";
-import { FakelandiaRouter } from './components/routes/router';
+import { FakelandiaRouter } from './components/router/router';
+ 
 
 
 
@@ -12,13 +13,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-         
-
         <FakelandiaRouter />
-          
       </BrowserRouter>  
     </>
-  )
+  );
 }
 
 export default App
